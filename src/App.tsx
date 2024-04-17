@@ -1,14 +1,15 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { Link, Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 const router = createBrowserRouter([
   {
-    path: '',
+    path: '/vite-project/',
+    element: <div><Link to={'home'}>home</Link><Outlet/></div>,
     children: [
       {
-        path: 'home',
+        path: '/home/',
         element: <div>home</div>
       },
       {
-        path: 'about',
+        path: '/about/',
         element: <div>about</div>
       }
     ]
